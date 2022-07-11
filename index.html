@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel NOVO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid-header">
+        <div class="text-center option" id="co" onclick="showForm()">Cadastrar operações</div>
+        <div class="text-center option" id="lo" onclick="showList()">Listar operações</div>
+    </div>
+
+    <div class="grid-container">
+        <div class="form smallmergedcell grid-container" id="form">
+
+            <div class="cell smallmergedcell">
+                <div class="text-center">
+                    <h3>Operação</h3>
+                    <input type="radio" id="" name="operacao" value="Compra">
+                    <label for="html">Compra</label>
+                    <input type="radio" id="css" name="operacao" value="Venda">
+                    <label for="css">Venda</label>
+                </div>
+            </div>
+
+            <div class="cell text-center">
+                <h3 for="stocks">Escolha uma ação:</h3>
+                <select name="stocks" id="stocks">
+
+                    <!-- automatically generated options -->
+                    
+                </select>
+            </div>
+
+            <div class="cell">
+                Quantidade de ações(Q):
+                <input id="q" type="number" class="smallinput">
+            </div>
+            <div class="cell">
+                Custo unitário da ação(U):
+                <input id="u" type="number" class="smallinput">
+            </div>
+            <div class="cell">
+                Custo de corretagem(C):
+                <input id="c" type="number" class="smallinput">
+            </div>
+
+            <div class="cell mergedcell text-center">
+                <button onclick="registerOperation()">Cadastrar</button>
+            </div>
+        </div>
+
+        <div class="details" id="details">
+            <strong>Detalhes da última operação</strong>
+            <table class="table">
+                <tr>
+                    <td>Tipo:</td>
+                    <td id="d_operacao"></td>
+                </tr>
+                <tr>
+                    <td>Ação:</td>
+                    <td id="d_stock"></td>
+                </tr>
+                <tr>
+                    <td>Quantidade:</td>
+                    <td id="d_quantidade"></td>
+                </tr>
+                <tr>
+                    <td>Custo Unitário:</td>
+                    <td id="d_unidade"></td>
+                </tr>
+                <tr>
+                    <td>Custo de Corretagem:</td>
+                    <td id="d_corretagem"></td>
+                </tr>
+                <tr>
+                    <td>Valor de Compra:</td>
+                    <td id="d_valorcompra"></td>
+                </tr>
+                <tr>
+                    <td>Custo de Negociações:</td>
+                    <td id="d_emolumentos"></td>
+                </tr>
+                <tr>
+                    <td>Custo de Liquidação:</td>
+                    <td id="d_liquidacao"></td>
+                </tr>
+                <tr>
+                    <td>Taxas:</td>
+                    <td id="d_taxas"></td>
+                </tr>
+                <tr>
+                    <td>Valor total da negociação:</td>
+                    <td id="d_total"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="list" class="table  mergedcell">
+            <table id="operationTable">
+                <tr>
+                    <th>Tipo da Operação</th>
+                    <th>Stock</th>
+                    <th>Quantidade(Q)</th>
+                    <th>Custo Unitário(U)</th>
+                    <th>Valor Total(X)</th>
+                </tr>
+
+                <!-- automatically generated rows-->
+
+              </table>
+        </div>
+
+    </div>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
